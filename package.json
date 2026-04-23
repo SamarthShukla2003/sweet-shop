@@ -1,13 +1,16 @@
 {
   "name": "sweet-shop",
   "private": true,
+  "homepage": "https://samarthshukla2003.github.io/sweet-shop/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "npx gh-pages -d dist"
   },
   "dependencies": {
     "lucide-react": "^1.8.0",
