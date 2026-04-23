@@ -144,15 +144,18 @@
 
 .testimonial-card {
   background-color: var(--surface);
-  padding: 2rem;
-  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(211, 84, 0, 0.08);
   box-shadow: var(--shadow);
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .testimonial-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(211, 84, 0, 0.2);
 }
 
 .stars {

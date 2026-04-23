@@ -1,16 +1,16 @@
 :root {
-  --primary: #e65100; /* Deep Saffron/Orange */
-  --primary-light: #ff833a;
-  --secondary: #800000; /* Maroon */
-  --accent: #ffb300; /* Gold */
-  --background: #fffdf5; /* Cream/Off-white */
+  --primary: #d35400; /* Richer Saffron */
+  --primary-light: #e67e22;
+  --secondary: #7b241c; /* Deeper Maroon */
+  --accent: #f1c40f; /* Warm Gold */
+  --background: #fffcf8; /* Softer Cream */
   --surface: #ffffff;
-  --text-dark: #333333;
-  --text-light: #f5f5f5;
+  --text-dark: #2c3e50;
+  --text-light: #fdfefe;
   --border: #f0e6d2;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --transition: all 0.3s ease;
+  --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 20px 40px -10px rgba(0, 0, 0, 0.12), 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 * {
@@ -20,8 +20,10 @@
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Outfit', system-ui, -apple-system, sans-serif;
   background-color: var(--background);
+  background-image: radial-gradient(rgba(211, 84, 0, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
   color: var(--text-dark);
   line-height: 1.6;
 }
@@ -49,9 +51,11 @@ button {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
   color: var(--secondary);
   font-weight: 700;
   line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 /* Utilities */
@@ -63,11 +67,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.375rem;
-  font-weight: 600;
+  padding: 0.85rem 1.75rem;
+  border-radius: 50px;
+  font-weight: 500;
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
   text-align: center;
   transition: var(--transition);
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -95,11 +104,14 @@ h1, h2, h3, h4, h5, h6 {
 .btn-outline {
   border: 2px solid var(--primary);
   color: var(--primary);
+  background: transparent;
 }
 
 .btn-outline:hover {
   background-color: var(--primary);
   color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
 }
 
 /* Animations */
