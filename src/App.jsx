@@ -1,9 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { CartProvider } from './context/CartContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import CartSidebar from './components/CartSidebar';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
@@ -14,13 +12,11 @@ import Contact from './pages/Contact';
 
 function App() {
   return (
-    <CartProvider>
-      <Router>
-        <ScrollToTop />
-        <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-          <Navbar />
-          <CartSidebar />
-          <FloatingWhatsApp />
+    <Router>
+      <ScrollToTop />
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <Navbar />
+        <FloatingWhatsApp />
           <main style={{ flex: 1 }}>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -33,7 +29,6 @@ function App() {
           <Footer />
         </div>
       </Router>
-    </CartProvider>
   );
 }
 

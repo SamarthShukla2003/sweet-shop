@@ -40,7 +40,6 @@ const Home = () => {
           <h2>Authentic Taste of Tradition</h2>
           <p>Handcrafted Indian sweets made with pure desi ghee, premium dry fruits, and love.</p>
           <div className="hero-btns">
-            <Link to="/menu" className="btn btn-primary">Order Now</Link>
             <a href="https://wa.me/919695614411?text=Hi,%20I%20want%20to%20order%20sweets%20from%20New%20Pindi%20Sweets" target="_blank" rel="noopener noreferrer" className="btn" style={{ backgroundColor: '#25D366', color: 'white' }}>Order via WhatsApp</a>
           </div>
         </div>

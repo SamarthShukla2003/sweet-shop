@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ShoppingCart, Phone } from 'lucide-react';
-import { useCart } from '../context/CartContext';
+import { Menu, X, Phone } from 'lucide-react';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { cartCount, setIsCartOpen } = useCart();
   const location = useLocation();
 
   useEffect(() => {
@@ -53,11 +51,6 @@ const Navbar = () => {
           </div>
 
           <div className="nav-actions">
-            <button className="cart-icon-btn" onClick={() => setIsCartOpen(true)}>
-              <ShoppingCart size={24} />
-              {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
-            </button>
-            
             <button className="mobile-toggle" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
               {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>

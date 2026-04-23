@@ -1,9 +1,7 @@
 import React from 'react';
-import { useCart } from '../context/CartContext';
 import './SweetCard.css';
 
 const SweetCard = ({ item }) => {
-  const { addToCart } = useCart();
 
   return (
     <div className="sweet-card fade-in">
@@ -15,9 +13,6 @@ const SweetCard = ({ item }) => {
         <p className="sweet-desc">{item.description}</p>
         <div className="sweet-footer">
           <span className="price">₹{item.price} / {item.unit || 'kg'}</span>
-          <button className="btn btn-primary btn-add" onClick={() => addToCart(item)}>
-            Add to Order
-          </button>
         </div>
       </div>
     </div>
