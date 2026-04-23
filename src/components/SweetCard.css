@@ -1,0 +1,69 @@
+.sweet-card {
+  background-color: var(--surface);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sweet-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.sweet-img-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.sweet-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.sweet-card:hover .sweet-img {
+  transform: scale(1.05);
+}
+
+.sweet-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.sweet-info h3 {
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.sweet-desc {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.sweet-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.price {
+  font-weight: bold;
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.btn-add {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
